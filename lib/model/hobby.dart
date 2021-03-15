@@ -1,0 +1,455 @@
+var baseURL = "assets/lotties/";
+
+enum Type {entertainment, maintenance, relationship, learning}
+
+class Hobby {
+  Hobby({this.type, this.description, this.optional, this.author, this.json});
+
+  Type type;
+  String description;
+  String optional;
+  String author;
+  String json;
+}
+
+var hobbiesList = [
+  Hobby(
+      type: Type.learning,
+      description: "Hecho con mucho aburrimiento. 😑",
+      optional: "Kevin Rojas",
+      author: "https://krojas-nv.firebaseapp.com/",
+      json: "${baseURL}24699-man-account-icon.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Visita el museo junto con tus amigos.",
+      optional: "Abbas Einali",
+      author: "https://lottiefiles.com/abbas",
+      json: "${baseURL}992-articulation.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Aprende sobre criptomodenas.",
+      optional: "Abbas Einali",
+      author: "https://lottiefiles.com/abbas",
+      json: "${baseURL}17870-bitcoin-btc-transaction.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Ahorrar dinero.",
+      optional: "Ana Lario",
+      author: "https://lottiefiles.com/superlario",
+      json: "${baseURL}9888-money-money-money.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Realiza una limpieza bucal. No olvides la seda dental.",
+      optional: "Leonard Rey Fernandez",
+      author: "https://lottiefiles.com/user180776",
+      json: "${baseURL}14519-cleaning-teeth.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Revisa  tu cuerpo o visita al medico por un chequeo.",
+      optional: "Colored Pie",
+      author: "https://lottiefiles.com/coloredpie",
+      json: "${baseURL}24867-online-doctor-app.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Celebra tus logros.",
+      optional: "Ping Lu",
+      author: "https://lottiefiles.com/pingluuu",
+      json: "${baseURL}14496-medal.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Escuchando una banda sonora y planea lo que quieres en los próximos cinco años.",
+      optional: "Kosti Marko",
+      author: "https://lottiefiles.com/kostimarko",
+      json: "${baseURL}1579-music-loading.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Escoge un libro muy corto y leerlo hasta el final.",
+      optional: "Sant Rojas",
+      author: "https://lottiefiles.com/santr",
+      json: "${baseURL}23486-reading-a-book.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Piensa en una idea que cambiará al mundo.",
+      optional: "Webination",
+      author: "https://lottiefiles.com/webination",
+      json: "${baseURL}34450-ideas-bulbs.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Crear un proyecto junto con tus amigos.",
+      optional: "Jignesh Gajjar",
+      author: "https://lottiefiles.com/jigneshgajjar",
+      json: "${baseURL}35911-02-03-project-management.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Aprende conceptos básicos de programación.",
+      optional: "Tam Doan",
+      author: "https://lottiefiles.com/kunio",
+      json: "${baseURL}8306-programming-animation.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Ver documentales con temas de su interés: universo, mecánica, mascotas…",
+      optional: "Sant Rojas",
+      author: "https://lottiefiles.com/santr",
+      json: "${baseURL}38376-astronaut-planet-exploration.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Escribir artículos, crear su propio sitio virtual para compartir con otros sobre lo que sabe y le apasiona.",
+      optional: "Pepapp Design Crew",
+      author: "https://lottiefiles.com/letspepapp",
+      json: "${baseURL}18633-dozens-of-articles.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Investigar sobre los dos o tres destinos turísticos que siempre has querido conocer. ",
+      optional: "morgan mendieta",
+      author: "https://lottiefiles.com/dedpnda",
+      json: "${baseURL}25503-global-economy.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Diseñar o dirigir su propio portafolio web o canal virtual. Se puede pedir ayuda.",
+      optional: "Oswaldo Becerra Quintero",
+      author: "https://lottiefiles.com/user/118187",
+      json: "${baseURL}9824-portfolio.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Practicar o aprender bailes de su gusto.",
+      optional: "Alex Bradt",
+      author: "https://lottiefiles.com/AlexBradt",
+      json: "${baseURL}2469-dino-dance.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Aprender o perfeccionar un idioma.",
+      optional: "Natalia Świerz",
+      author: "https://lottiefiles.com/natalia",
+      json: "${baseURL}27275-hey-hi-hello.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Revisar tutoriales en YouTube de algo que te sea de utilidad. Ejemplo: como limpiar una licuadora o algo así.",
+      optional: "Chris Gannon",
+      author: "https://lottiefiles.com/chrisgannon",
+      json: "${baseURL}408-youtube-icon-reveal.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Realizar cursos online y obtén el certificado.",
+      optional: "Mikhail Voloshin",
+      author: "https://lottiefiles.com/Mikhail_V94",
+      json: "${baseURL}30884-online-tutorials-online-work.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Aprender y practicar recetas de cocina.",
+      optional: "Mohit Saini",
+      author: "https://lottiefiles.com/mohitsaini155",
+      json: "${baseURL}3139-microwave-oven.json"),
+  Hobby(
+      type: Type.learning,
+      description: "Escribir un diario de lo que sientes, vives y experimentas. (como fuente de reflexión)",
+      optional: "Misha Grebennikov",
+      author: "https://lottiefiles.com/mogoo",
+      json: "${baseURL}23675-read-a-book.json"),
+  Hobby(
+      type: Type.relationship,
+      description: "Invita familia/amigo(a) a ir a realizar actividad física.",
+      optional: "Sant Rojas",
+      author: "https://lottiefiles.com/santr",
+      json: "${baseURL}23724-home-workout.json"),
+  Hobby(
+      type: Type.relationship,
+      description: "Invita familia/amigo(a) a ir de compras.",
+      optional: "Istvan Robert Kiss",
+      author: "https://lottiefiles.com/kiriss",
+      json: "${baseURL}5211-isometric-mall.json"),
+  Hobby(
+      type: Type.relationship,
+      description: "Invita familia/amigo(a) a ir de pesca.",
+      optional: "한영희",
+      author: "https://lottiefiles.com/0202",
+      json: "${baseURL}6729-fish.json"),
+  Hobby(
+      type: Type.relationship,
+      description: "Invita familia/amigo(a) a un paseo y apreciar algo diferente.",
+      optional: "Erick Daniel Juarez Gil",
+      author: "https://lottiefiles.com/ErickDanielJuarezGil",
+      json: "${baseURL}2316-a-mountain.json"),
+  Hobby(
+      type: Type.relationship,
+      description: "Invita familia/amigo(a) a un paseo y apreciar algo diferente.",
+      optional: "Erick Daniel Juarez Gil",
+      author: "https://lottiefiles.com/ErickDanielJuarezGil",
+      json: "${baseURL}2316-a-mountain.json"),
+  Hobby(
+      type: Type.relationship,
+      description: "Invita familia/amigo(a) a un cine y ver algo nuevo.",
+      optional: "Priyanka Rani",
+      author: "https://lottiefiles.com/priyanka",
+      json: "${baseURL}34590-movie-theatre.json"),
+  Hobby(
+      type: Type.relationship,
+      description: "Invita familia/amigo(a) a un restaurante y probar algo nuevo.",
+      optional: "Pathange Balaji Rao",
+      author: "https://lottiefiles.com/balajirao",
+      json: "${baseURL}31454-food-prepared-food-app.json"),
+  Hobby(
+      type: Type.relationship,
+      description: "Invita familia/amigo(a) a manejar bicicleta.",
+      optional: "UI8",
+      author: "https://lottiefiles.com/UI8",
+      json: "${baseURL}17046-teamwork-startup-animations.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Limpia ventanas y espejos.",
+      optional: "Babatunde Ogundiyun",
+      author: "https://lottiefiles.com/babatunde",
+      json: "${baseURL}28145-let-some-light-in.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Haz revisión de tu botiquín.",
+      optional: "sarpreet kalyan",
+      author: "https://lottiefiles.com/gangbeetle",
+      json: "${baseURL}4566-medical-cross-sos-emergency.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Recicla.",
+      optional: "Eriton Gomes",
+      author: "https://lottiefiles.com/user/217153",
+      json: "${baseURL}23997-ecoleta.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Vende o desecha apropiadamente aparatos electrónicos que no tienen reparo o que ya no quieres tener.",
+      optional: "EPMIT Design",
+      author: "https://lottiefiles.com/user/389188",
+      json: "${baseURL}29055-page-error-animation.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Limpia y ordenar la habitación para aprovechar mejor el espacio.",
+      optional: "Xero Hub",
+      author: "https://lottiefiles.com/xerohub",
+      json: "${baseURL}21635-smart-bedroom.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Limpia y desinfecta tu computadora, celular y todo dispositivo que uses.",
+      optional: "Ision Industries",
+      author: "https://lottiefiles.com/IsionIndustries",
+      json: "${baseURL}17391-responsive-morphing-infographics.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Organiza el armario y regala lo que ya no uses.",
+      optional: "Mohmmed Akasha",
+      author: "https://lottiefiles.com/user101421",
+      json: "${baseURL}20480-cloth-basket.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Haz mantenimiento a los ventiladores de tu casa.",
+      optional: "Aleksandr Dolgij",
+      author: "https://lottiefiles.com/aleks.mograph",
+      json: "${baseURL}22122-fanimation.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Repara las cosas que puedas reparar XD.",
+      optional: "Leonard Rey Fernandez",
+      author: "https://lottiefiles.com/user180776",
+      json: "${baseURL}14525-plumbers.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Hacer su hogar más sostenible.",
+      optional: "Lemotion",
+      author: "https://lottiefiles.com/Valeria",
+      json: "${baseURL}28966-plastic-bag.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Organizar la biblioteca.",
+      optional: "Umesh Limbu",
+      author: "https://lottiefiles.com/user/34807",
+      json: "${baseURL}12234-books.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Organizar el archivo fotográfico digital. Usa la nube.",
+      optional: "Mujahid Islam",
+      author: "https://lottiefiles.com/mujahid",
+      json: "${baseURL}38458-photo-uploading.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Limpiar, organizar para regalar cosas que ya no use.",
+      optional: "Amzad Hossain",
+      author: "https://lottiefiles.com/amzad",
+      json: "${baseURL}40270-cleaning-the-floor-to-destroy-germs.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Crear, organizar o actualizar tus listas de música.",
+      optional: "saim raza",
+      author: "https://lottiefiles.com/user/37689",
+      json: "${baseURL}39134-music.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Actualizar los perfiles de redes sociales.",
+      optional: "Jignesh Gajjar",
+      author: "https://lottiefiles.com/jigneshgajjar",
+      json: "${baseURL}30762-social-media-network.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Actualizar y perfeccionar la hoja de vida.",
+      optional: "Marian Regan",
+      author: "https://lottiefiles.com/user/26316",
+      json: "${baseURL}4922-search-files.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Realiza una revisión de tu celular para eliminar archivos innecesarios.",
+      optional: "Juan Pablo Rojas",
+      author: "https://lottiefiles.com/user/481432",
+      json: "${baseURL}33984-update.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "Limpia y desinfectar las superficies tu casa.",
+      optional: "Amzad Hossain",
+      author: "https://lottiefiles.com/amzad",
+      json: "${baseURL}40270-cleaning-the-floor-to-destroy-germs.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "No olvides hidratarte, alimentarse bien y sanamente.",
+      optional: "Abdul Latif",
+      author: "https://lottiefiles.com/animoox",
+      json: "${baseURL}29951-healthy-lifestyle-exercise.json"),
+  Hobby(
+      type: Type.maintenance,
+      description: "No olvides hidratarte, alimentarse bien y sanamente.",
+      optional: "Meriç Kaan Yılmaz",
+      author: "https://lottiefiles.com/user/48077",
+      json: "${baseURL}5922-water-loading.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Invita a los bolos.",
+      optional: "Ana Cossio",
+      author: "https://lottiefiles.com/user/47897",
+      json: "${baseURL}5747-strike.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Invita un café.",
+      optional: "Elmer Vergara",
+      author: "https://lottiefiles.com/teef",
+      json: "${baseURL}28235-coffee-time.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Descubre algo nuevo en tu ciudad.",
+      optional: "Vijay Pawar",
+      author: "https://lottiefiles.com/vijaypwr61",
+      json: "${baseURL}31673-moving-city.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Aprender a tocar un instrumento musical.",
+      optional: "DxTree",
+      author: "https://lottiefiles.com/dxtr",
+      json: "${baseURL}31363-drummer.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Salir a caminar con tu familia y/o amigos.",
+      optional: "Daniel Fernandez",
+      author: "https://lottiefiles.com/user/6063",
+      json: "${baseURL}3113-duck-blue-style.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "No hagas nada sólo duerme un rato.",
+      optional: "Liam ODonnell",
+      author: "https://lottiefiles.com/spikything",
+      json: "${baseURL}40488-sleeping-girl.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Bañar a tu mascota.",
+      optional: "한영희",
+      author: "https://lottiefiles.com/0202",
+      json: "${baseURL}6732-animal.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Realiza una videollamada con tus amigos.",
+      optional: "Khawaja Sameer",
+      author: "https://lottiefiles.com/user/258172",
+      json: "${baseURL}18583-video-call.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Una buena ducha, una diferente.",
+      optional: "Akiko",
+      author: "https://lottiefiles.com/pemaakiko",
+      json: "${baseURL}13543-bathing-time.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Sacar a pasear a tu mascota.",
+      optional: "romixi",
+      author: "https://lottiefiles.com/romixi",
+      json: "${baseURL}24278-pet-lovers.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Mira una serie de televisión.",
+      optional: "Willy Mendoza",
+      author: "https://lottiefiles.com/user/190578",
+      json: "${baseURL}14429-tv.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Mira una película .",
+      optional: "Priyanka Rani",
+      author: "https://lottiefiles.com/priyanka",
+      json: "${baseURL}34590-movie-theatre.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Practica la fotografía, crear un álbum de cosas asombrosas, se vale selfie.",
+      optional: "Marian Regan",
+      author: "https://lottiefiles.com/user/26316",
+      json: "${baseURL}5459-camera.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Practica el dibujo.",
+      optional: "Данила Вычуров",
+      author: "https://lottiefiles.com/user/104814",
+      json: "${baseURL}16560-sketch-drawing.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Practica la pintura.",
+      optional: "Seyfi Cem Baskin",
+      author: "https://lottiefiles.com/seyfi",
+      json: "${baseURL}27600-balcony-leisure.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Leer novelas, poesía, ficción o biografías de personas que admire, según tus gustos.",
+      optional: "Vijay Pawar",
+      author: "https://lottiefiles.com/vijaypwr61",
+      json: "${baseURL}26081-reading-lady.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Meditar, practicar yoga o cualquier otra técnica que se adapte a usted y a sus circunstancias.",
+      optional: "CreativPixl",
+      author: "https://lottiefiles.com/user/581391",
+      json: "${baseURL}39411-relax.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Aprende trucos de magia para sorprender a familiares y amigos.",
+      optional: "Gauthier Fumery",
+      author: "https://lottiefiles.com/user/128222",
+      json: "${baseURL}33600-magician.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Jugar juegos de consola también se vale en el móvil, y gana por lo menos 1 partida.",
+      optional: "aan hamdani",
+      author: "https://lottiefiles.com/aanhamdani",
+      json: "${baseURL}13689-gameboy-color.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Colorear mandalas.",
+      optional: "Paul Roux",
+      author: "https://lottiefiles.com/paulymations",
+      json: "${baseURL}22066-mandala.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Planta una pequeña planta en tu casa.",
+      optional: "My SOS Family",
+      author: "https://lottiefiles.com/mysosfamily",
+      json: "${baseURL}9624-watering-and-growing-plants.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Practicar juegos de mesa emocionante y retadores, se puede modificar las reglas y establecer premios para el ganador.",
+      optional: "Howan Sarkisian",
+      author: "https://lottiefiles.com/howan",
+      json: "${baseURL}2821-ace-of-cards.json"),
+  Hobby(
+      type: Type.entertainment,
+      description: "Armar rompecabezas de tu gusto.",
+      optional: "Akhil Ashokan",
+      author: "https://lottiefiles.com/user/402207",
+      json: "${baseURL}28833-team-work.json"),
+  
+];
